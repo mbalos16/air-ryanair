@@ -1,0 +1,53 @@
+body {
+  padding-bottom: 60px; /* Same as footer height */
+}
+
+.navbar {
+  margin: 5px 0px 5px 0px;
+}
+
+.special_text {
+  color: #073590;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.slogan{
+  padding: 5px 15px 5px 15px;
+}
+
+a {
+  color: #073590;
+}
+
+figcaption{
+  font-size: 12px;
+  text-align: right;
+}
+
+.horizontal_card {
+  background-color: #f1c933;
+  padding: 20px;
+  margin: 25px 0px 25px 0px;
+  width: 100%;
+}
+
+figure img {
+  width: 100%; 
+  height: auto;
+}
+
+
+.footer {
+  background-color: #073590;
+  color: #eeeeee;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
