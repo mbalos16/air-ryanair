@@ -1,4 +1,5 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% from 'bootstrap5/form.html' import render_form %}
+
 {% block content%}
 <!-- Slogan-->
 <div class="row slogan">
@@ -33,5 +34,12 @@
       </figcaption>
     </figure>
   </div>
+</div>
+
+<div>
+  <form action="{{url_for('form_response')}}" method="POST">
+    <h2>{{form_title}}</h2>
+    <p>{{render_form(form)}}</p>
+  </form>
 </div>
 {% endblock %}

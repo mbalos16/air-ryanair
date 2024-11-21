@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% from 'bootstrap5/form.html' import render_form %}
+{% block content%}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <form action="{{url_for('register')}}" method="POST">
+        <h1>Track a <bold class="special_text">Flight Route</bold></h1>
+          <p>Please fill out the following form.</p>
+          {% if success %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success! </strong>{{success}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            
+          {% endif %}
+        <p>{{render_form(form)}}</p>
+      </form>
+    </div>
+    <div class="col-4">
+      <p>
+        Register to my datasbase to receive up to date stadistics about a
+        specific flight route. You will need a new registration for each route.
+      </p>
+      <p>
+        You will be able to unsuscribe from this service at any point. 
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
