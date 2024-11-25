@@ -48,21 +48,13 @@ class SearchForm(FlaskForm):
 
 
 class Register(FlaskForm):
-    first_name = StringField(
-        label = "First Name",
-        name = "first_name",
+    price = IntegerField(
+        label = "Desired price", 
+        name = "desired_price",
         render_kw = {
-            "placeholder": "Maria"
+            "placeholder": "£50"
         },
-        validators = [DataRequired(message = "Please provide your first name")])
-
-    last_name = StringField(
-        label = "Last Name",
-        name = "last_name",
-        render_kw = {
-            "placeholder": "Balos"
-        },
-        validators = [DataRequired(message = "Please provide your last name")])
+        validators = [DataRequired()])
     
     email = StringField(
         label = "Email Address",
@@ -71,24 +63,6 @@ class Register(FlaskForm):
             "placeholder": "mariabalos16@gmail.com"
         },
         validators = [DataRequired(message = "Please provide your email adress.")])
-
-    depart_iata_code = StringField(
-        label = "Departure Airport Code",
-        name = "depart_iata_code", 
-        render_kw = {
-            "placeholder": "Enter IATA code (e. g., STN)..."
-        },
-        validators = [DataRequired(message = "Please provide a 3-letters IATA Code"), 
-            Length(3)])
-
-    arrival_iata_code = StringField(
-        label = "Destination Airport Code",
-        name = "arrival_iata_code",
-        render_kw = {
-            "placeholder": "Enter IATA code (e. g., BCN)"
-        },
-        validators = [DataRequired(message = "Please provide a 3-letters IATA Code"), 
-        Length(3)])
     
     submit_button = SubmitField(
         label = "Register"
