@@ -39,13 +39,6 @@ def register():
             return render_template('register.html', form = form, success = success)
     return render_template('register.html', form = form,)
 
-
-@app.route("/general_stats")
-def general_stats():
-    title = "Statistics"
-    return render_template("general_stats.html", title = title)
-
-
 @app.route("/form-response", methods = ["GET", "POST"])
 def form_response():
     title = "Form response"
