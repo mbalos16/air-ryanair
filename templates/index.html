@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% from 'bootstrap5/form.html' import render_form %}
-
 {% block content%}
 <!-- Slogan-->
 <div class="row slogan">
@@ -17,7 +16,7 @@
     <figure>
       <img
         class="img-fluid"
-        src="../static/ryanair_plane.jpg"
+        src="{{url_for('static', filename = 'images/ryanair_plane.jpg')}}"
         alt="Image showing an Ryanair plane flying"
       />
       <figcaption>
